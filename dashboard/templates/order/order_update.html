@@ -1,0 +1,9 @@
+{% block content %}
+  <div class="update-form-container">
+    <h2>Update order "{{ order.product }}"</h2>
+    <form method="post" class="update-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="update-button">Update</button>
+    </form>
+  </div>

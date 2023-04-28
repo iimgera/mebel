@@ -1,0 +1,10 @@
+{% block content %}
+  <h1>Клиенты</h1>
+  <ul>
+    {% for customer in customer_list %}
+    <li><a href="{{ customer.get_absolute_url }}">{{ customer.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'customer-create' %}"><button type="button">Добавить клиента</button></a>
+{% endblock %}
+</body>

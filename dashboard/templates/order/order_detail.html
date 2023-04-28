@@ -1,0 +1,9 @@
+{% block content %}
+  <div class="order">
+    <h1>{{ object.product }}</h1>
+    <h2>Заказ от {{ object.date }}</h2>
+    <p>Клиент: <a href="{{ object.customer.get_absolute_url }}">{{ object.customer }}</a></p>
+    <p>Сотрудник: {{ object.employee }}</p>
+    <p>Cумма: {{ order.product.price }}$</p>
+  </div>
+{% endblock %}

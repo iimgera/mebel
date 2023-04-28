@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="order-delete">
+  <h1>Delete Customer</h1>
+  <p>Are you sure you want to delete "{{ order.product }}"?</p>
+  <form class="order-delete__form" method="post">
+    {% csrf_token %}
+    <button type="submit">Yes</button>
+    <a href="{% url 'order-list' %}">No</a>
+  </form>
+</div>
+{% endblock %}
+
+
